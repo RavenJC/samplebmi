@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student BMI Management System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <h2>Student BMI Management System</h2>
+  </div>
+  <div class="container">
+    <button onclick="showForm()">Add Student</button>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Gender</th>
+          <th>Phone</th>
+          <th>Height</th>
+          <th>Weight</th>
+          <th>BMI</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <!-- Student form modal -->
+    <div id="studentForm" class="modal hidden">
+      <h3 id="formTitle">Add Student</h3>
+      <input type="text" id="name" placeholder="Name" required />
+      <input type="text" id="phone" placeholder="Phone Number" required />
+      <input type="text" id="gender" placeholder="Gender" required />
+      <input type="number" id="height" placeholder="Height (m)" step="0.01" required />
+      <input type="number" id="weight" placeholder="Weight (kg)" step="0.1" required />
+      <button onclick="saveStudent()">Save</button>
+      <button onclick="hideForm()">Cancel</button>
+    </div>
+  </div>
+  <!-- Load your script at the end for DOM readiness -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>

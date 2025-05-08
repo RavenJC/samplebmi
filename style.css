@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e3f2fd;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1em;
+}
+h2 {
+  text-align: center;
+}
+input, button {
+  display: block;
+  width: 100%;
+  padding: 0.6em;
+  margin: 0.5em 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+button {
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0d47a1;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+th, td {
+  padding: 0.8em;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #90caf9;
+  padding: 1em;
+}
+.modal {
+  background: #fff;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.hidden {
+  display: none;
+}
+.status {
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  color: white;
+}
+.status.normal { background: green; }
+.status.underweight { background: orange; }
+.status.overweight { background: darkorange; }
+.status.obese { background: red; }
