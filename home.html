@@ -17,8 +17,8 @@
           <th>Name</th>
           <th>Gender</th>
           <th>Phone</th>
-          <th>Height</th>
-          <th>Weight</th>
+          <th>Height (ft)</th>
+          <th>Weight (kg)</th>
           <th>BMI</th>
           <th>Status</th>
           <th>Actions</th>
@@ -32,13 +32,13 @@
       <input type="text" id="name" placeholder="Name" required />
       <input type="text" id="phone" placeholder="Phone Number" required />
       <input type="text" id="gender" placeholder="Gender" required />
-      <input type="number" id="height" placeholder="Height (m)" step="0.01" required />
+      <input type="number" id="heightFeet" placeholder="Height (feet)" step="0.01" required />
       <input type="number" id="weight" placeholder="Weight (kg)" step="0.1" required />
       <button onclick="saveStudent()">Save</button>
       <button onclick="hideForm()">Cancel</button>
     </div>
   </div>
-  <!-- Load your script at the end for DOM readiness -->
+  <!-- Load your script at the end -->
   <script type="module" src="script.js"></script>
 </body>
 </html>
