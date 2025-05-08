@@ -1,78 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Login - BMI System</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f0f0f0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      background: white;
-      padding: 2em;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-      max-width: 300px;
-      width: 100%;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 1em;
-    }
-
-    input {
-      width: 100%;
-      padding: 0.6em;
-      margin: 0.5em 0;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    button {
-      width: 100%;
-      padding: 0.6em;
-      background-color: #1976d2;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      margin-top: 1em;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #1565c0;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h2>Login</h2>
     <form id="loginForm">
-      <input type="email" id="email" placeholder="Enter email" required />
-      <input type="password" id="password" placeholder="Enter password" required />
+      <input type="email" id="email" placeholder="Enter email" required>
+      <input type="password" id="password" placeholder="Enter password" required>
       <button type="submit">Login</button>
     </form>
   </div>
+
   <script>
     document.getElementById('loginForm').addEventListener('submit', function(e) {
       e.preventDefault();
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
 
-      const email = document.getElementById('email').value.trim();
-      const password = document.getElementById('password').value.trim();
-
-      // Hardcoded credentials for demo
+      // Dummy credentials
       if (email === "admin@gmail.com" && password === "admin") {
         localStorage.setItem("loggedIn", "true");
-        // Redirect to your home page
-        location.href = "home.html"; 
+        location.href = "home.html";
       } else {
         alert("Invalid credentials");
       }
